@@ -1,0 +1,527 @@
+/* Import fonts */
+@font-face {
+  font-family: "Gotham Rounded Medium";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Gotham Rounded"), url("../assets/GothamRoundedMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gotham Rounded Book";
+  font-style: normal;
+  font-display: swap;
+  src: local("Gotham Rounded"), url("../assets/GothamRoundedBook.woff") format("woff");
+}
+
+body {
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #f2f5f7;
+  color: #333;
+  padding: 10px;
+}
+
+a {
+  color: #0578be;
+}
+
+a:hover {
+  color: #0062a0;
+}
+
+h3 {
+  font-family: "Gotham Rounded Medium", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #333;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+
+h4 {
+  font-family: "Gotham Rounded Medium", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+
+input {
+  font-family: "Gotham Rounded Book", sans-serif;
+  display: block;
+  padding: 12px;
+  border-style: none;
+  background-color: #f2f2f2;
+  margin-right: 8px;
+}
+
+.maincontainer {
+  padding: 1% 2%;
+}
+
+.cumulative-wrapper  {
+  min-height: 900px;
+}
+
+.cumulative-wrapper-posts  {
+  min-height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .maincontainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .mainitem {
+    max-width: 280px;
+    min-width: 280px;
+  }
+}
+
+.mainitem {
+  margin: 10px;
+  max-height: 500px;
+  max-width: 800px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%), 0 3px 10px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 350px;
+}
+
+.mainitem:hover {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.itempicture:hover {
+  transform: scale(1.05);
+  transition: all 0.8s ease 0.1s;
+}
+
+.placeholderdiv {
+  text-align: center;
+  color: white;
+  background-color: linear-gradient(rgb(5 120 190 / 30%), rgb(0 0 0 / 0%));
+}
+
+/* Feed item/post buttons */
+.item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-button-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-button-container {
+  padding-bottom: 10px;
+}
+
+.item-button-admin-skele {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frontpage-button {
+  border: solid 1px;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #0578be;
+  padding: 15px 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.frontpage-button:hover {
+  border: solid 1px;
+  background-color: #fff;
+  border-color: #0062a0;
+  color: #0062a0;
+  padding: 15px 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-weight: 300;
+}
+
+.app-button {
+  border: solid 1px;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #0578be;
+  padding: 15px 40px;
+  text-align: center;
+  display: inline-block;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.app-button:hover {
+  border: solid 1px;
+  background-color: #fff;
+  border-color: #0062a0;
+  color: #0062a0;
+  padding: 15px 40px;
+  text-align: center;
+  display: inline-block;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-weight: 300;
+}
+
+.primary {
+  border-radius: 30px;
+}
+
+.black {
+  border-radius: 30px;
+  background-color: #222;
+  color: #fff;
+}
+
+.pagination-wrapper {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation bar */
+.kologo {
+  display: inline-block;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.kologo,
+.kologo::before,
+.kologo::after {
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.nucleo,
+.kologo,
+.kologo::before,
+.kologo::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kologo::before,
+.kologo::after {
+  content: "";
+}
+
+.kologo::after {
+  transform: rotate(-60deg);
+}
+
+.kologo::before {
+  transform: rotate(60deg);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Page default style (non-feed) */
+
+.pagecontainer {
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+.page {
+  padding: 5px 20px 20px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+  background-color: #fff;
+  max-width: 1000px;
+}
+
+.pageheader {
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  border-top: 1px;
+  border-top-style: solid;
+  border-top-color: #ccc;
+  color: #0578be;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footerwrapper {
+  padding: 20px 60px;
+}
+
+.footer .footertext {
+  color: black;
+}
+
+.app-wrapper {
+  text-align: right;
+}
+
+.socials-wrapper {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* One post / page */
+.postcontainer {
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .postcontainer {
+    max-width: 375px;
+  }
+}
+
+.post {
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+  background-color: #fff;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+.post-seleton {
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+  background-color: #fff;
+  max-width: 1000px;
+}
+
+.posttype {
+  color: #666;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  font-size: 0.9em;
+}
+
+.postdate {
+  color: #666;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.socials {
+  padding-top: 15px;
+}
+
+#basic-menu {
+  margin: 10px;
+}
+
+.post p {
+  white-space: pre-line;
+  line-height: 140%;
+  font-size: 0.99rem;
+}
+
+.post table,
+th,
+td {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.post ul {
+  list-style-type: circle;
+  padding-left: 35px;
+}
+
+.post ol {
+  padding-left: 35px;
+}
+
+.post li input {
+  display: inline;
+}
+
+.post h4 {
+  padding-top: 10px;
+}
+
+.post h3 {
+  padding: none;
+  margin: none;
+}
+
+.post blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.8em 10px;
+}
+
+.post blockquote::before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4rem;
+  line-height: 0.1rem;
+  margin-right: 0.1rem;
+  vertical-align: -0.4rem;
+}
+
+.post blockquote p {
+  display: inline;
+}
+
+.post code {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.post hr {
+  border: 1px solid lightgrey;
+  opacity: 0.5;
+}
+
+/* Post Editor */
+.postformwrapper {
+  padding: 10px;
+}
+
+form {
+  display: block;
+}
+
+label {
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+
+select {
+  font-family: "Gotham Rounded Book", sans-serif;
+  display: block;
+  border-style: none;
+  background-color: #eee;
+  width: 150px;
+  padding: 10px;
+}
+
+#submitbutton {
+  margin-top: 10px;
+}
+
+#iotsikko,
+#imgsrc,
+#desc {
+  width: 30rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #iotsikko,
+  #imgsrc,
+  #desc {
+    width: 92%;
+  }
+}
+
+#content {
+  min-width: 300px;
+  min-height: 300px;
+  width: 98%;
+  margin-top: 20px;
+}
+
+/* Sign in, auth stuff */
+.signinwrapper {
+  margin-top: 5%;
+  margin-left: 12px;
+}
+
+.signinbox {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 30px;
+  min-width: 300px;
+  min-height: 100%;
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.signinlogo {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 15px;
+}
+
+#signinbutton {
+  margin-top: 10px;
+  font-family: "Gotham Rounded Book", sans-serif;
+  border-style: none;
+  color: #444;
+  width: 150px;
+  padding: 10px;
+}
+
+.usersignedinnav {
+  background-color: rgb(240 240 240);
+  opacity: 0.9;
+  width: 100%;
+}
+
+.usersignedin {
+  background-color: #eee;
+  opacity: 0.9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  direction: row;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.signoutbutton {
+  margin: 0;
+  padding: 10px;
+}

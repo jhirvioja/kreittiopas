@@ -1,0 +1,22 @@
+{
+  "name": "kreittiopas-apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node local_dev_index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "firebase-admin": "^10.2.0",
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}
