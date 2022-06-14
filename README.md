@@ -1,4 +1,4 @@
-# Kreittiopas
+# Kreittiopas Next.js Preact Progressive Web App
 
 This is a sandbox/demo/learning project for me personally. A Next.js/Preact pwa for a fictional webzine called Kreittiopas. Its design is based on HSL's Reittiopas, with the following badum-tshh Finnish pun-intended joke: if you add a letter k in front of reittiopas it literally means a "crate guide" in Finnish. No harm done because this is not going to be ever fully materialized as a real project.
 
