@@ -89,7 +89,7 @@ If you want to try it out, here is a list of envs that need to be set before it 
 
 You also need to:
 
-- add required fonts to `assets`-folder for copyright reasons, I can't provide them
+- add required fonts to `assets`-folder. For copyright reasons, I can't provide them
 - add your backend url to `apollo-client.js`
 - add your google account id to `[...nextauth].js`, or change the provider/logic for auth
 
