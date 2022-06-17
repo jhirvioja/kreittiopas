@@ -81,7 +81,7 @@ NEXTAUTH_URL needs to be provided in the Dockerfile as env in order for the auth
 
 If you want to try it out, here is a list of envs that need to be set before it works correctly:
 
-- GOOGLE_CLIENT_ID (or you can cahnge the provider/logic for auth)
+- GOOGLE_CLIENT_ID (or you can change the provider/logic for auth)
 - GOOGLE_CLIENT_SECRET (see above)
 - NEXTAUTH_URL: this should be also in the Dockerfile as ENV if one decides to use Docker
 - NEXTAUTH_SECRET
