@@ -1,4 +1,4 @@
-# Apollo Server for Kreittiopas website
+# Apollo Server for Kreittiopas Web App
 
 This Apollo Server uses GraphQL to do some basic CRUD operations for the Kreittiopas website admin panel. Database resides in Firestore. It is not optimized in the sense that it polls the backend a lot and returns all of the posts, but it works fine for my use case (50k requests is the daily free limit quota at Firestore and every next 100k requests cost peanuts, basically).
 
@@ -6,7 +6,7 @@ I mixed async/await, promises and callbacks as a learning experience.
 
 Probably a basic SQL server would have been fine, as you can get the amount of documents via simple query vs. with Firestore noSQL such query is not even possible (number of documents in a collection actually goes through the whole collection). Though then you would have to host a SQL server, so the cons and pros might offset.
 
-Also if I would do it again, I would probably do a simple Python API backend. This stuff got kinda messy with JavaScript fast.
+Also if I would do it again, I would probably do a simpler REST API backend probably in a language which has a clearer syntax. This stuff got kinda messy with JavaScript fast.
 
 ## index.js file
 

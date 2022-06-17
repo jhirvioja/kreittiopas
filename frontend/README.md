@@ -47,7 +47,7 @@ Gets the post slug from the url, then passes the slug to the backend query and t
 
 - kreittiopas.fi/admin
 
-An admin panel, which allows the user to add, edit, delete posts and toggle the visibility of a post. Pretty much very very basic stuff you would want from a CMS. There is no error handling on adding a post (or: data to the Firestore) which makes the admin panel feel extremely dangerous. Did not implement image uploading, the preferred way of adding a photo is just linking it as a url.
+An admin panel, which allows the user to add, edit, delete posts and toggle the visibility of a post. Pretty much very very basic stuff you would want from a CMS. There is no error handling on adding a post (or: data to the Firestore) which makes the admin panel feel extremely dangerous. Did not implement image uploading, the preferred way of adding a photo is just linking it as an url.
 
 ### Static pages
 
@@ -81,8 +81,8 @@ NEXTAUTH_URL needs to be provided in the Dockerfile as env in order for the auth
 
 If you want to try it out, here is a list of envs that need to be set before it works correctly:
 
-- GOOGLE_CLIENT_ID
-- GOOGLE_CLIENT_SECRET
+- GOOGLE_CLIENT_ID (or you can cahnge the provider/logic for auth)
+- GOOGLE_CLIENT_SECRET (see above)
 - NEXTAUTH_URL: this should be also in the Dockerfile as ENV if one decides to use Docker
 - NEXTAUTH_SECRET
 - JWT_SIGNING_PRIVATE_KEY
