@@ -1,6 +1,6 @@
 # Apollo Server for Kreittiopas Web App
 
-This Apollo Server uses GraphQL to do some basic CRUD operations for the Kreittiopas website admin panel. Database resides in Firestore. It is not optimized in the sense that it polls the backend a lot and returns all of the posts, but it works fine for my use case (50k requests is the daily free limit quota at Firestore and every next 100k requests cost peanuts, basically).
+This Apollo Server uses GraphQL to do some basic CRUD operations for the Kreittiopas website admin panel. Database resides in Firestore. It is not optimized in the sense that it requests the backend a lot and returns all of the posts, but it works fine for my use case (50k requests is the daily free limit quota at Firestore and every next 100k requests cost peanuts, basically).
 
 I mixed async/await, promises and callbacks as a learning experience.
 
