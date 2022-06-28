@@ -1,10 +1,10 @@
-import Head from "next/head";
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
-const Nav = dynamic(() => import("../components/Nav"));
-const Footer = dynamic(() => import("../components/Footer"));
+const Nav = dynamic(() => import('../components/Nav'))
+const Footer = dynamic(() => import('../components/Footer'))
 
 export default function Offline() {
   return (
@@ -14,7 +14,7 @@ export default function Offline() {
       </Head>
       <Nav />
       <main>
-        <div style={{paddingTop: "10px", paddingBottom: "10px"}}>
+        <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
           <Grid
             container
             spacing={2}
@@ -24,12 +24,15 @@ export default function Offline() {
             alignItems="center"
           >
             <Grid item lg={3}>
-              <center>Hups! Sivua ei voitu hakea. Nettiyhteytesi voi olla heikko tai olet lentokonetilassa.</center>
+              <center>
+                Hups! Sivua ei voitu hakea. Nettiyhteytesi voi olla heikko tai
+                olet lentokonetilassa.
+              </center>
             </Grid>
           </Grid>
         </div>
       </main>
       <Footer />
     </div>
-  );
+  )
 }

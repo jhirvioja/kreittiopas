@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 
-const withPWA = require('next-pwa');
+const withPWA = require('next-pwa')
 
 module.exports = {
   images: {
-    domains: ['https://i.imgur.com', 'i.imgur.com', 'https://imgur.com', 'imgur.com'] // not sure if this is necessary
+    domains: [
+      'https://i.imgur.com',
+      'i.imgur.com',
+      'https://imgur.com',
+      'imgur.com',
+    ], // not sure if this is necessary
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -18,7 +23,7 @@ module.exports = {
   },
   experimental: {
     outputStandalone: true,
-  }
+  },
 }
 
 module.exports = withPWA({
@@ -54,9 +59,9 @@ module.exports = withPWA({
           cacheName: 'static-font-assets',
           expiration: {
             maxEntries: 4,
-            maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
-          }
-        }
+            maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
+          },
+        },
       },
       {
         urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
@@ -65,15 +70,15 @@ module.exports = withPWA({
           cacheName: 'static-image-assets',
           expiration: {
             maxEntries: 64,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
-          }
-        }
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
       },
       {
         urlPattern: /\/_next\/image\?url=.+$/i,
-        handler: "StaleWhileRevalidate",
+        handler: 'StaleWhileRevalidate',
         options: {
-          cacheName: "next-image",
+          cacheName: 'next-image',
           expiration: {
             maxEntries: 64,
             maxAgeSeconds: 24 * 60 * 60, // 24 hours
@@ -88,9 +93,9 @@ module.exports = withPWA({
           cacheName: 'static-audio-assets',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
-          }
-        }
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
       },
       {
         urlPattern: /\.(?:mp4)$/i,
@@ -100,9 +105,9 @@ module.exports = withPWA({
           cacheName: 'static-video-assets',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
-          }
-        }
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
       },
       {
         urlPattern: /\.(?:js)$/i,
@@ -111,9 +116,9 @@ module.exports = withPWA({
           cacheName: 'static-js-assets',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
-          }
-        }
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
       },
       {
         urlPattern: /\.(?:css|less)$/i,
@@ -122,19 +127,19 @@ module.exports = withPWA({
           cacheName: 'static-style-assets',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
-          }
-        }
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
       },
       {
         urlPattern: /\/_next\/data\/.+\/.+\.json$/i,
-        handler: "StaleWhileRevalidate",
+        handler: 'StaleWhileRevalidate',
         options: {
-          cacheName: "next-data",
+          cacheName: 'next-data',
           expiration: {
             maxEntries: 32,
             maxAgeSeconds: 24 * 60 * 60, // 24 hours
-          }
+          },
         },
       },
       {
@@ -144,12 +149,12 @@ module.exports = withPWA({
           cacheName: 'static-data-assets',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 60 * 60 // 1 hour
-          }
-        }
+            maxAgeSeconds: 60 * 60, // 1 hour
+          },
+        },
       },
       {
-        urlPattern: ({url}) => {
+        urlPattern: ({ url }) => {
           const isSameOrigin = self.origin === url.origin
           if (!isSameOrigin) return false
           const pathname = url.pathname
@@ -166,13 +171,13 @@ module.exports = withPWA({
           cacheName: 'apis',
           expiration: {
             maxEntries: 16,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
           },
-          networkTimeoutSeconds: 10 // fall back to cache if api does not response within 10 seconds
-        }
+          networkTimeoutSeconds: 10, // fall back to cache if api does not response within 10 seconds
+        },
       },
       {
-        urlPattern: ({url}) => {
+        urlPattern: ({ url }) => {
           const isSameOrigin = self.origin === url.origin
           if (!isSameOrigin) return false
           const pathname = url.pathname
@@ -184,13 +189,13 @@ module.exports = withPWA({
           cacheName: 'others',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 24 * 60 * 60 // 24 hours
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
           },
-          networkTimeoutSeconds: 10
-        }
+          networkTimeoutSeconds: 10,
+        },
       },
       {
-        urlPattern: ({url}) => {
+        urlPattern: ({ url }) => {
           const isSameOrigin = self.origin === url.origin
           return !isSameOrigin
         },
@@ -199,10 +204,10 @@ module.exports = withPWA({
           cacheName: 'cross-origin',
           expiration: {
             maxEntries: 32,
-            maxAgeSeconds: 60 * 60 // 1 hour
+            maxAgeSeconds: 60 * 60, // 1 hour
           },
-        }
-      }
-    ]
-  }
+        },
+      },
+    ],
+  },
 })

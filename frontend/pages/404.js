@@ -1,11 +1,11 @@
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Error = () => {
-  return(
-    <div style={{paddingTop: "10px"}}>
+  return (
+    <div style={{ paddingTop: '10px' }}>
       <Grid
         container
         spacing={2}
@@ -21,11 +21,13 @@ const Error = () => {
 }
 
 export default function Custom404() {
-  return (<>
-  <Nav />
-  <main>
-  <Error />
-    </main>
-  <Footer />
-  </>)
+  return (
+    <>
+      <Nav />
+      <main>
+        <Error />
+      </main>
+      <Footer />
+    </>
+  )
 }

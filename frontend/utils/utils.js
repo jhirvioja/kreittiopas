@@ -1,5 +1,5 @@
 // function which converts isostring date from database to a better string
-export function isoStringToPvm(isoString: string) {
+export function isoStringToPvm(isoString) {
   const date = new Date(isoString)
   const monthnames = [
     '1',
@@ -22,6 +22,6 @@ export function isoStringToPvm(isoString: string) {
 
 // function which truncates aka cuts off the text if it is longer than n characters
 // used on feed for post description length
-export function truncateDesc(str: string, n: number) {
+export function truncateDesc(str, n) {
   return str.length > n ? str.substring(0, n - 1) + '...' : str
 }

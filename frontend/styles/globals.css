@@ -1,21 +1,23 @@
 /* Import fonts */
 @font-face {
-  font-family: "Gotham Rounded Medium";
+  font-family: 'Gotham Rounded Medium';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local("Gotham Rounded"), url("../assets/GothamRoundedMedium.woff") format("woff");
+  src: local('Gotham Rounded'),
+    url('../assets/GothamRoundedMedium.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gotham Rounded Book";
+  font-family: 'Gotham Rounded Book';
   font-style: normal;
   font-display: swap;
-  src: local("Gotham Rounded"), url("../assets/GothamRoundedBook.woff") format("woff");
+  src: local('Gotham Rounded'),
+    url('../assets/GothamRoundedBook.woff') format('woff');
 }
 
 body {
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   background-color: #fff;
@@ -38,7 +40,7 @@ a:hover {
 }
 
 h3 {
-  font-family: "Gotham Rounded Medium", sans-serif;
+  font-family: 'Gotham Rounded Medium', sans-serif;
   font-weight: 300;
   font-size: 1.3rem;
   color: #333;
@@ -47,14 +49,14 @@ h3 {
 }
 
 h4 {
-  font-family: "Gotham Rounded Medium", sans-serif;
+  font-family: 'Gotham Rounded Medium', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   margin: 0;
 }
 
 input {
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   display: block;
   padding: 12px;
   border-style: none;
@@ -66,11 +68,11 @@ input {
   padding: 1% 2%;
 }
 
-.cumulative-wrapper  {
+.cumulative-wrapper {
   min-height: 900px;
 }
 
-.cumulative-wrapper-posts  {
+.cumulative-wrapper-posts {
   min-height: 400px;
 }
 
@@ -147,7 +149,7 @@ input {
   text-align: center;
   display: inline-block;
   margin: 10px;
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   font-weight: 300;
   text-decoration: none;
   font-size: 0.9em;
@@ -162,7 +164,7 @@ input {
   text-align: center;
   display: inline-block;
   margin: 10px;
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   font-weight: 300;
 }
 
@@ -174,7 +176,7 @@ input {
   padding: 15px 40px;
   text-align: center;
   display: inline-block;
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   font-weight: 300;
   text-decoration: none;
   font-size: 0.9em;
@@ -190,7 +192,7 @@ input {
   padding: 15px 40px;
   text-align: center;
   display: inline-block;
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   font-weight: 300;
 }
 
@@ -239,7 +241,7 @@ input {
 
 .kologo::before,
 .kologo::after {
-  content: "";
+  content: '';
 }
 
 .kologo::after {
@@ -437,7 +439,7 @@ label {
 }
 
 select {
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   display: block;
   border-style: none;
   background-color: #eee;
@@ -496,7 +498,7 @@ select {
 
 #signinbutton {
   margin-top: 10px;
-  font-family: "Gotham Rounded Book", sans-serif;
+  font-family: 'Gotham Rounded Book', sans-serif;
   border-style: none;
   color: #444;
   width: 150px;

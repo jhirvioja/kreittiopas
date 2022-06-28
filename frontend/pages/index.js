@@ -1,11 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import ClientOnly from "../components/ClientOnly";
+import ClientOnly from '../components/ClientOnly'
 
-const Nav = dynamic(() => import("../components/Nav"));
-const Feed = dynamic(() => import("../components/Feed"), { ssr: false });
-const Pagination = dynamic(() => import("../components/Pagination"), { ssr: false });
-const Footer = dynamic(() => import("../components/Footer"));
+const Nav = dynamic(() => import('../components/Nav'))
+const Feed = dynamic(() => import('../components/Feed'), { ssr: false })
+const Pagination = dynamic(() => import('../components/Pagination'), {
+  ssr: false,
+})
+const Footer = dynamic(() => import('../components/Footer'))
 
 export default function ClientSide() {
   return (
@@ -15,16 +17,16 @@ export default function ClientSide() {
       </Head>
       <Nav />
       <main>
-      <div className="cumulative-wrapper">
-        <ClientOnly>
-          <Feed />
-          <div className="paginationwrapper">
-            <Pagination />
-          </div>
-        </ClientOnly>
-      </div>
+        <div className="cumulative-wrapper">
+          <ClientOnly>
+            <Feed />
+            <div className="paginationwrapper">
+              <Pagination />
+            </div>
+          </ClientOnly>
+        </div>
       </main>
       <Footer />
     </div>
-  );
+  )
 }

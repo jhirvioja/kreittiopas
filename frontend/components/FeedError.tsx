@@ -1,9 +1,10 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 export default function FeedError() {
-  return (<div style={{paddingTop: "10px", paddingBottom: "10px"}}>
+  return (
+    <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
       <Grid
         container
         spacing={2}
@@ -13,9 +14,11 @@ export default function FeedError() {
         alignItems="center"
         textAlign="center"
       >
-      <Grid item lg={3}>
-        Hups! Sisällön haku tietokannasta epäonnistui. Nettiyhteytesi voi olla heikko, olet lentokonetilassa tai tietokanta on alhaalla.
+        <Grid item lg={3}>
+          Hups! Sisällön haku tietokannasta epäonnistui. Nettiyhteytesi voi olla
+          heikko, olet lentokonetilassa tai tietokanta on alhaalla.
+        </Grid>
       </Grid>
-     </Grid>
-   </div>)
- }
+    </div>
+  )
+}

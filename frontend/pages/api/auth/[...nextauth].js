@@ -1,13 +1,14 @@
-import NextAuth from "next-auth"
-import Providers from "next-auth/providers";
+import NextAuth from 'next-auth'
+import Providers from 'next-auth/providers'
 
 export default NextAuth({
   providers: [
     Providers.Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
-    })
+      authorizationUrl:
+        'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
+    }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
   jwt: {
@@ -15,11 +16,12 @@ export default NextAuth({
   },
   callbacks: {
     async signIn(user, account, profile) {
-      let isAllowedToSignIn = false;
-      if (user.id === "{{ADD GOOGLE ACCOUNT ID HERE}}") { // use the id of the google account which is allowed to sign in
-        isAllowedToSignIn = true;
+      let isAllowedToSignIn = false
+      if (user.id === '{{ADD GOOGLE ACCOUNT ID HERE}}') {
+        // use the id of the google account which is allowed to sign in
+        isAllowedToSignIn = true
       } else {
-        isAllowedToSignIn = false;
+        isAllowedToSignIn = false
       }
 
       if (isAllowedToSignIn) {
@@ -31,10 +33,9 @@ export default NextAuth({
         // return '/unauthorized'
       }
     },
-    async redirect(url, baseUrl) { // this does something important which lets the auth to work in cloud
-      return url.startsWith(baseUrl)
-        ? url
-        : baseUrl
-    }
-  }
+    async redirect(url, baseUrl) {
+      // this does something important which lets the auth to work in cloud
+      return url.startsWith(baseUrl) ? url : baseUrl
+    },
+  },
 })
